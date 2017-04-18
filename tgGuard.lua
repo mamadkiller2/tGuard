@@ -10,9 +10,9 @@ notify = lgi.require('Notify')
 notify.init ("Telegram updates")
 chats = {}
 day = 86400
-bot_id = 180191663 -- [[محل قرار گیری آیدی اکانت ربات]]
-sudo_users = {158955285,180191663,279700027} -- [[محل قرار گیری آیدی سودو ها]]
-bot_owner = {158955285,180191663,279700027} -- [[ محل قرار گیری آیدی مدیر اصلی ربات ]]
+bot_id = 321924765 -- [[محل قرار گیری آیدی اکانت ربات]]
+sudo_users = {204949667,183061011} -- [[محل قرار گیری آیدی سودو ها]]
+bot_owner = {204949667,183061011} -- [[ محل قرار گیری آیدی مدیر اصلی ربات ]]
   -----------------------------------------------------------------------------------------------                  
      ---------------
   -- Start Functions --
@@ -3261,10 +3261,10 @@ local function gpro(extra, result, success)
     local txt = {string.match(text, "^([Dd]ata) (%d+)$")} 
     local hash =  'sudo:data:'..txt[2]
 	local list = database:smembers(hash)
-	if tonumber(txt[2]) == 123456786 then
-	name = "1"
-	elseif tonumber(txt[2]) == 180191663 then
-	name = "sajjad"
+	if tonumber(txt[2]) == 183061011 then
+	name = "alisham"
+	elseif tonumber(txt[2]) == 204949667 then
+	name = "#Killer"
 	elseif tonumber(txt[2]) == 158955285 then
 	name = "sajjad_021"
 	else
@@ -3365,26 +3365,7 @@ local pin_id = database:get('pinnedmsg'..msg.chat_id_)
          send(msg.chat_id_, msg.id_, 1, '🔹پیام سنجاق شده سابق ، مجدد سنجاق شد !', 1, 'md')
 		 end
    end
- -----------------------------------------------------------------------------------------------
-   if text:match("^[Tt]g[Gg]uard$") then
-   
-   local text = [[*
-tgGuard Version: 5.0		
 
-This is an original bot and based on (tgGuard)
-Copyright all right reserved and you must respect all laws.
-					
-Source: https://github.com/tgMember/tGuard
-					
-Channel: @tgMember
-		
-Messenger: @tgMessageBot
-		
-Creator: @sajjad_021
-		
-Site: http://tgMember.cf *]]
-           send(msg.chat_id_, msg.id_, 1, text, 1, 'md')
-   end
    -----------------------------------------------------------------------------------------------
    if text:match("^[Hh]elp$") and is_mod(msg.sender_user_id_, msg.chat_id_) then
    
